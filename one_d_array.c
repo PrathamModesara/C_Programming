@@ -2,26 +2,26 @@
 
 int main() {
 
-    int arr[5];
-    int i, sum = 0;
+    int n, i, sum = 0;
 
-    printf("===== 1D ARRAY (User Input) =====\n");
+    printf("Enter size of array: ");
+    scanf("%d", &n);
 
-    // Taking input from user
-    printf("Enter 5 elements:\n");
-    for(i = 0; i < 5; i++) {
+    int arr[n];   // Variable Length Array
+
+    printf("Enter %d elements:\n", n);
+    for(i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
-    
-    // Printing array elements
+
     printf("Array elements are:\n");
-    for(i = 0; i < 5; i++) {
+    for(i = 0; i < n; i++) {
         printf("%d ", arr[i]);
         sum += arr[i];
     }
 
     printf("\nSum = %d\n", sum);
-    printf("Average = %.2f\n", (float)sum / 5);
+    printf("Average = %.2f\n", (float)sum / n);
 
     return 0;
 }
